@@ -1,0 +1,70 @@
+DEVICE: auto
+DATA_DIR: data
+COCO_DIR: data/coco
+NLTK_DATA_DIR: data/nltk_data
+COCO_ROOT: data/coco
+COCO_TRAIN_IMG: data/coco/train2017
+COCO_VAL_IMG: data/coco/val2017
+COCO_IMAGES: data/coco/train2017
+COCO_VAL_IMAGES: data/coco/val2017
+COCO_TRAIN_ANN: data/coco/annotations/captions_train2017.json
+COCO_VAL_ANN: data/coco/annotations/captions_val2017.json
+COCO_ANNOTATIONS: data/coco/annotations
+MODEL_DIR: models
+CHECKPOINT_DIR: checkpoints
+KNOWLEDGE_BASE_DIR: knowledge_base
+KNOWLEDGE_DIR: knowledge_base
+RESULTS_DIR: results
+SEGMENTATION_MODEL: facebook/maskformer-swin-large-coco
+MODEL_TYPE: llava
+LLAVA_MODEL_PATH: models/llava-1.5-7b-hf
+MINIGPT4_MODEL_PATH: models/blip2-opt-2.7b
+INSTRUCTBLIP_MODEL_PATH: models/instructblip-vicuna-7b
+QWEN_MODEL_PATH: models/qwen3-vl-8b-instruct-abliterated-CV
+LLM_MODEL_NAME: models/llava-1.5-7b-hf
+LLM_CACHE_DIR: null
+GNN_HIDDEN_DIM: 512
+GNN_NUM_LAYERS: 3
+GNN_NUM_HEADS: 8
+GNN_DROPOUT: 0.1
+GNN_LEARNING_RATE: 0.0001
+GNN_WEIGHT_DECAY: 0.00001
+BATCH_SIZE: 8
+NUM_EPOCHS: 3
+LEARNING_RATE: 0.0001
+WEIGHT_DECAY: 0.00001
+GRAD_CLIP: 1.0
+MAX_OBJECTS: 30
+MIN_CORE_OBJECTS: 3
+MAX_CORE_OBJECTS: 10
+REL_MAX_PER_OBJECT: 3
+REL_MIN_PAIR_SCORE: 0.40
+REL_NEAR_THRESHOLD: 0.20
+CONFIDENCE_LOW_THRESHOLD: 0.4
+CONFIDENCE_HIGH_THRESHOLD: 0.7
+MC_DROPOUT_SAMPLES: 10
+INFERENCE_CONFIDENCE_THRESHOLD: 0.5
+MAX_INFERRED_OBJECTS: 8
+VISUAL_CONTEXT_FILTER_STUFF_MERGED: true
+VISUAL_CONTEXT_FILTER_KEYWORDS: true
+VISUAL_CONTEXT_BACKGROUND_KEYWORDS:
+  - wall
+  - floor
+  - ceiling
+  - pavement
+  - road
+  - grass
+  - sky
+  - building
+  - mountain
+  - dirt
+  - curtain
+  - rug
+  - banner
+MAX_RELATIONS_IN_CONTEXT: 5
+EVAL_METRICS:
+  - bleu
+  - rouge
+  - meteor
+  - chair
+NUM_WORKERS: 4
