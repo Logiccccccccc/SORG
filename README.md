@@ -60,10 +60,6 @@ Create a Python environment and install the project dependencies from the provid
 pip install -r requirements.txt
 ```
 
-If your server requires a specific CUDA/PyTorch build, install the matching `torch`, `torchvision`, and `torchaudio` versions first, then install the remaining packages from `requirements.txt`.
-
-SPICE evaluation requires Java.
-
 ## Data Preparation
 
 Place COCO data under the project directory using the following structure:
