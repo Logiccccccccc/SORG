@@ -202,8 +202,3 @@ python sorg/inference.py \
   --ablation_mode complete
 ```
 
-## Notes
-
-- The scripts do not contain hard-coded server absolute paths.
-- Configure local model directories through YAML files.
-- Run commands from the project root for the cleanest relative-path behavior.
