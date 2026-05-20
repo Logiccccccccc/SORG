@@ -24,10 +24,13 @@ vision-caption-correction/
 │   ├── knowledge_builder.py
 │   ├── model_core.py
 │   └── train.py
+├── requirements.txt
 └── README.md
 ```
 
 ## Configuration
+
+The old monolithic `sorg/config.py` has been changed into a YAML-based loader. The actual configuration values are stored in `configs/`:
 
 - `configs/default.yaml`: common paths, model settings, GNN parameters, training defaults, and inference thresholds.
 - `configs/train.yaml`: training overrides.
@@ -70,13 +73,13 @@ You can change these locations in the YAML files if your server uses a different
 
 ## Installation
 
-Create an environment and install the required packages according to your CUDA/PyTorch version. A typical setup is:
+Create a Python environment first, then install the project dependencies from the provided `requirements.txt` file:
 
 ```bash
-pip install torch torchvision torchaudio
-pip install transformers accelerate pillow tqdm numpy scipy scikit-learn pyyaml nltk pycocotools
-pip install git+https://github.com/salaniz/pycocoevalcap.git
+pip install -r requirements.txt
 ```
+
+If the PyTorch version in `requirements.txt` does not match your server CUDA version, install the correct PyTorch build for your CUDA environment first, then install the remaining dependencies from `requirements.txt`.
 
 SPICE evaluation requires Java.
 
