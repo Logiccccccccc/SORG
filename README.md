@@ -30,7 +30,6 @@ vision-caption-correction/
 
 ## Configuration
 
-The old monolithic `sorg/config.py` has been changed into a YAML-based loader. The actual configuration values are stored in `configs/`:
 
 - `configs/default.yaml`: common paths, model settings, GNN parameters, training defaults, and inference thresholds.
 - `configs/train.yaml`: training overrides.
